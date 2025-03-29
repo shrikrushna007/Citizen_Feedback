@@ -2,9 +2,8 @@ import "./App.css";
 import RootLayout from "./components/RootLayout";
 import Error from "./components/Error";
 import Home from "./components/Home";
-import Signin from "./components/Signin";
-import Signup from "./components/Signup";
-import Articles from "./components/Articles";
+import SignIn from "./components/Signin";
+import SignUp from "./components/Signup";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 const browserRouterObj = createBrowserRouter(
@@ -15,9 +14,14 @@ const browserRouterObj = createBrowserRouter(
       errorElement: <Error />,
       children: [
         { path: "", element: <Home /> },
-        { path: "signin", element: <Signin /> },
-        { path: "signup", element: <Signup /> },
-        { path: "articles", element: <Articles /> },
+        { path: "signin", element: <SignIn /> },
+        { path: "signup", element: <SignUp /> },
+        { path: "dashboard", element: <Dashboard /> },
+        { path: "issue-report", element: <IssueReport /> },
+        { path: "issue-track", element: <IssueTracking /> },
+        { path: "admin", element: <Admin /> },
+        { path: "citizen", element: <Citizen /> },
+        { path: "municipal", element: <Municipal /> },
       ],
     },
   ],
